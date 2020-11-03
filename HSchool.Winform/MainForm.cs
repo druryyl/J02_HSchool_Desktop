@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HSchool.Winform.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,11 @@ using System.Windows.Forms;
 
 namespace HSchool.Winform
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
 
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             this.ResizeEnd += delegate { this.Refresh(); };
@@ -33,5 +34,22 @@ namespace HSchool.Winform
             this.Refresh();
         }
 
+        private void ProfileMenu_Click(object sender, EventArgs e)
+        {
+            var menu = (RibbonButton)sender;
+            Form form = null;
+            switch (menu.Name)
+            {
+                case "ProfileMenu":
+                    form = new StudentProfileForm();
+                    break;
+                default:
+                    break;
+            }
+
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
