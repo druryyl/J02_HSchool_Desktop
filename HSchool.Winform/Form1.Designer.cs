@@ -56,12 +56,13 @@
             this.ribbon1.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2010;
             this.ribbon1.OrbVisible = false;
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(892, 116);
+            this.ribbon1.Size = new System.Drawing.Size(892, 115);
             this.ribbon1.TabIndex = 1;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.TabsMargin = new System.Windows.Forms.Padding(6, 2, 20, 0);
             this.ribbon1.TabSpacing = 3;
             this.ribbon1.Text = "ribbon1";
+            this.ribbon1.ThemeColor = System.Windows.Forms.RibbonTheme.Black;
             // 
             // ribbonTab1
             // 
@@ -90,8 +91,8 @@
             // 
             // AttendanceMenu
             // 
-            this.AttendanceMenu.Image = global::HSchool.Winform.Properties.Resources.myspace_48px;
-            this.AttendanceMenu.LargeImage = global::HSchool.Winform.Properties.Resources.myspace_48px;
+            this.AttendanceMenu.Image = global::HSchool.Winform.Properties.Resources.queue_48px;
+            this.AttendanceMenu.LargeImage = global::HSchool.Winform.Properties.Resources.queue_48px;
             this.AttendanceMenu.Name = "AttendanceMenu";
             this.AttendanceMenu.SmallImage = ((System.Drawing.Image)(resources.GetObject("AttendanceMenu.SmallImage")));
             this.AttendanceMenu.Text = "Attendance";
@@ -116,13 +117,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 515);
+            this.ClientSize = new System.Drawing.Size(892, 625);
             this.Controls.Add(this.ribbon1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HSchool 1.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
 
         }

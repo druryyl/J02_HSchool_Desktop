@@ -73,6 +73,16 @@ namespace HSchool.Winform.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background {
+            get {
+                object obj = ResourceManager.GetObject("Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cash_in_hand_48px {
             get {
                 object obj = ResourceManager.GetObject("cash_in_hand_48px", resourceCulture);
@@ -96,6 +106,16 @@ namespace HSchool.Winform.Properties {
         internal static System.Drawing.Bitmap myspace_48px {
             get {
                 object obj = ResourceManager.GetObject("myspace_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap queue_48px {
+            get {
+                object obj = ResourceManager.GetObject("queue_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

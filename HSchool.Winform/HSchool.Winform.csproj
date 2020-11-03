@@ -102,5 +102,12 @@
   <ItemGroup>
     <None Include="Resources\increase_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queue_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Background.jpg" />
+    <None Include="Resources\Background1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
