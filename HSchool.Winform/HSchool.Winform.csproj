@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background.jpg" />
+    <None Include="Resources\student_profile_pic.png" />
     <None Include="Resources\estimate_48px.png" />
     <None Include="Resources\profile_48px.png" />
     <None Include="Resources\Background1.jpg" />

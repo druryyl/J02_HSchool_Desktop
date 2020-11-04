@@ -15,6 +15,19 @@ namespace HSchool.Winform.Forms
         public StudentProfileForm()
         {
             InitializeComponent();
+
+            var listStudent = new List<StudentModel>
+            {
+                new StudentModel("Dominique Angela Maurines"),
+                new StudentModel("Athalia rebecca thammy"),
+                new StudentModel("Yolenta Nathania Trahutama"),
+                new StudentModel("Jizelle Shalom Aubrey"),
+                new StudentModel("Fransisco Danar"),
+                new StudentModel("Joceline Ignacia"),
+                new StudentModel("Maria Luisa Putri Aer"),
+                new StudentModel("Chrissy Evelyn"),
+            };
+            dataGridView1.DataSource = listStudent;
         }
 
         private void InputPanel_Paint(object sender, PaintEventArgs e)
@@ -23,5 +36,14 @@ namespace HSchool.Winform.Forms
             ControlPaint.DrawBorder(e.Graphics, panel.ClientRectangle, 
                 Color.DarkKhaki, ButtonBorderStyle.Solid);
         }
+    }
+
+    public class StudentModel
+    {
+        public StudentModel(string name)
+        {
+            Name = name;
+        }
+        public string Name { get; set; }
     }
 }
