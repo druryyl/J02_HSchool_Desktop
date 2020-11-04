@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace HSchool.Winform
             this.Refresh();
         }
 
-        private void ProfileMenu_Click(object sender, EventArgs e)
+        private void Menu_Click(object sender, EventArgs e)
         {
             var menu = (RibbonButton)sender;
             Form form = null;
@@ -42,6 +43,9 @@ namespace HSchool.Winform
             {
                 case "ProfileMenu":
                     form = new StudentProfileForm();
+                    break;
+                case "RegistrationMenu":
+                    form = new RegisterForm();
                     break;
                 default:
                     break;

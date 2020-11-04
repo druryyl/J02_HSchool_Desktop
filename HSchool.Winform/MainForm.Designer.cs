@@ -92,7 +92,7 @@
             this.ProfileMenu.Name = "ProfileMenu";
             this.ProfileMenu.SmallImage = ((System.Drawing.Image)(resources.GetObject("ProfileMenu.SmallImage")));
             this.ProfileMenu.Text = "Profile";
-            this.ProfileMenu.Click += new System.EventHandler(this.ProfileMenu_Click);
+            this.ProfileMenu.Click += new System.EventHandler(this.Menu_Click);
             // 
             // RegistrationMenu
             // 
@@ -101,6 +101,7 @@
             this.RegistrationMenu.Name = "RegistrationMenu";
             this.RegistrationMenu.SmallImage = ((System.Drawing.Image)(resources.GetObject("RegistrationMenu.SmallImage")));
             this.RegistrationMenu.Text = "Registration";
+            this.RegistrationMenu.Click += new System.EventHandler(this.Menu_Click);
             // 
             // ribbonPanel2
             // 

@@ -159,7 +159,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.textBox5.BackColor = System.Drawing.Color.LightGray;
             this.textBox5.Location = new System.Drawing.Point(8, 21);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(257, 22);
