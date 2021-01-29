@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intersolusi.Helper.DataType
+namespace Intersolusi.Helper
 {
     public sealed class TypeConvertor
     {

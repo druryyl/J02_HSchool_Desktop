@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intersolusi.Helper.Dapper
+namespace Intersolusi.Helper
 {
     public static class DapperHelper
     {

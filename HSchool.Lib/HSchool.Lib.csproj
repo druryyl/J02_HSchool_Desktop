@@ -37,6 +37,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,11 +50,14 @@
     <Compile Include="BL\PersonBL.cs" />
     <Compile Include="BL\StudentBL.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Dal\ParamNoDal.cs" />
     <Compile Include="Dal\PersonDal.cs" />
     <Compile Include="Dto\PersonAddDto.cs" />
+    <Compile Include="Helpers\AutoNumberHelper.cs" />
     <Compile Include="Helpers\ConnStringHelper.cs" />
     <Compile Include="Helpers\DapperHelper.cs" />
     <Compile Include="Helpers\DataTypeHelper.cs" />
+    <Compile Include="Helpers\TransHelper.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="PersonDal.cs" />
