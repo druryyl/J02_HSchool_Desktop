@@ -11,10 +11,14 @@ namespace HSchool.Lib.Dto
     {
         public string PersonName { get; set; }
 
+        public string NickName { get; set; }
+
         public DateTime BirthDate { get; set; }
         public string BirthPlace { get; set; }
+        public GenderEnum Gender { get; set; }
 
-        public string Address { get; set; }
+        public string FullAddr { get; set; }
+        public string ShortAddr { get; set; }
         public string City { get; set; }
         public string PhoneNo { get; set; }
         public string Email { get; set; }
@@ -27,7 +31,7 @@ namespace HSchool.Lib.Dto
                 BirthDate = model.BirthDate,
                 BirthPlace = model.BirthPlace,
 
-                Address = model.Address,
+                FullAddr = model.FullAddr,
                 City = model.City,
                 PhoneNo = model.PhoneNo,
                 Email = model.Email,
