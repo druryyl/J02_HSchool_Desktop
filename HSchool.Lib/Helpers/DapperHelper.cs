@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using Intersolusi.Helper.DataType;
+using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
 using System.Data;

@@ -60,7 +60,6 @@
     <Compile Include="Helpers\TransHelper.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
-    <Compile Include="PersonDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

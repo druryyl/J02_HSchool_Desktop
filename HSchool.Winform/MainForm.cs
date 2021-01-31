@@ -1,4 +1,8 @@
-﻿using HSchool.Winform.Forms;
+﻿using HSchool.Lib;
+using HSchool.Lib.BL;
+using HSchool.Lib.Dal;
+using HSchool.Winform.Forms;
+using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +13,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
 
 namespace HSchool.Winform
 {
@@ -20,6 +25,13 @@ namespace HSchool.Winform
         {
             InitializeComponent();
             this.ResizeEnd += delegate { this.Refresh(); };
+
+            var container = new UnityContainer();
+            container.RegisterType<IParamNoDal, ParamNoDal>();
+            container.RegisterType<IParamNoBL, ParamNoBL>();
+            container.RegisterType<IPersonDal, PersonDal>();
+            container.RegisterType<IPersonBL, PersonBL>();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

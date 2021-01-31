@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HSchool.Lib.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace HSchool.Winform.Forms
 {
     public partial class StudentProfileForm : Form
     {
-        public StudentProfileForm()
+        private IPersonBL _personBL;
+        public StudentProfileForm(IPersonBL personBL)
         {
             InitializeComponent();
+
+            _personBL = personBL;
 
             var listStudent = new List<StudentModel>
             {

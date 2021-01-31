@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using HSchool.Lib.Models;
-using Intersolusi.Helper.Config;
-using Intersolusi.Helper.Dapper;
+using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
 using System.Data;
