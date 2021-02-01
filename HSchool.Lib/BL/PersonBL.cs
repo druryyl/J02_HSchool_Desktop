@@ -1,7 +1,9 @@
 ﻿using HSchool.Lib.Dal;
 using HSchool.Lib.Dto;
+using HSchool.Lib.Helpers;
 using HSchool.Lib.Models;
 using Intersolusi.Helper;
+using MoreLinq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,7 @@ namespace HSchool.Lib.BL
         IEnumerable<PersonSearchResultDto> SearchResult { get; set; }
         void Save();
         void Remove();
-
-
-
+        void Search(string keyword);
     }
     public class PersonBL : IPersonBL
     {
@@ -92,5 +92,44 @@ namespace HSchool.Lib.BL
             throw new NotImplementedException();
         }
 
+        public void Search(string keyword)
+        {
+            var listPerson = _personDal.ListData();
+            keyword = keyword.ToLower();
+
+            //  search name
+            var listByName = listPerson
+                .Where(x => x.PersonName.ToLower().Contains(keyword));
+            var listByNick = listPerson
+                .Where(x => x.NickName.ToLower().Contains(keyword));
+
+            //  search tgl lahir full
+            IEnumerable<PersonModel> listByTglLahir = null;
+            if (keyword.IsValidTgl("dd-MM-yyyy"))
+            {
+                var keywordDT = keyword.ToDate();
+                listByTglLahir = listPerson
+                    .Where(x => x.BirthDate.Date == keywordDT.Date);
+            }
+
+            var resultAll = new List<PersonModel>();
+            if (listByName.Any())
+                resultAll.AddRange(listByName);
+            if (listByNick.Any())
+                resultAll.AddRange(listByNick);
+            if (listByTglLahir.Any())
+                resultAll.AddRange(listByTglLahir);
+
+            var resultDistinct = resultAll
+                .DistinctBy(x => x.PersonID);
+
+            if (resultDistinct.Any())
+                SearchResult = resultDistinct
+                    .Select(r => new PersonSearchResultDto
+                    {
+                        PersonID = r.PersonID,
+                        PersonName = r.PersonName
+                    });
+        }
     }
 }

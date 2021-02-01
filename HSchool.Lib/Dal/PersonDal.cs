@@ -17,7 +17,7 @@ namespace HSchool.Lib.Dal
         void Update(PersonModel person);
         void Delete(IPersonKey person);
         PersonModel GetData(IPersonKey person);
-        IEnumerable<PersonModel> Search(string personName);
+        IEnumerable<PersonModel> ListData();
     }
 
     public class PersonDal : IPersonDal
@@ -130,7 +130,7 @@ namespace HSchool.Lib.Dal
                 return conn.ReadSingle<PersonModel>(sql, dp);
         }
 
-        public IEnumerable<PersonModel> Search(string personName)
+        public IEnumerable<PersonModel> ListData()
         {
             var sql = @"
                 SELECT
@@ -139,12 +139,9 @@ namespace HSchool.Lib.Dal
                     FullAddr, ShortAddr, City,
                     PhoneNo, Email
                 FROM
-                    HSOL_Person
-                WHERE
-                    PersonName LIKE @PersonName ";
+                    HSOL_Person ";
 
             var dp = new DynamicParameters();
-            dp.AddParam("@PersonID", $"%{personName}%", SqlDbType.VarChar);
 
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 return conn.Read<PersonModel>(sql, dp);

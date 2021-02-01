@@ -1,5 +1,5 @@
 ﻿
-namespace HSchool.Winform.View
+namespace HSchool.Winform.Forms
 {
     partial class PersonForm
     {
@@ -109,6 +109,7 @@ namespace HSchool.Winform.View
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(260, 22);
             this.SearchTextBox.TabIndex = 0;
+            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // tableLayoutPanel1
             // 

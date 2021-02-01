@@ -2,8 +2,6 @@
 using HSchool.Lib.BL;
 using HSchool.Lib.Dal;
 using HSchool.Winform.Forms;
-using HSchool.Winform.Presenters;
-using HSchool.Winform.View;
 using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
@@ -33,8 +31,6 @@ namespace HSchool.Winform
             _container.RegisterType<IParamNoBL, ParamNoBL>();
             _container.RegisterType<IPersonDal, PersonDal>();
             _container.RegisterType<IPersonBL, PersonBL>();
-
-            _container.RegisterType<IPersonView, PersonForm>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,19 +53,17 @@ namespace HSchool.Winform
             switch (menu.Name)
             {
                 case "ProfileMenu":
-                    var presenter = _container.Resolve<PersonPresenter>();
-                    presenter.Show();
-                    //form = _container.Resolve<PersonForm>();
+                    form = _container.Resolve<PersonForm>();
                     break;
                 case "RegistrationMenu":
                     form = new RegisterForm();
-                    form.StartPosition = FormStartPosition.CenterScreen;
-                    form.MdiParent = this;
-                    form.Show();
                     break;
                 default:
                     break;
             }
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.MdiParent = this;
+            form.Show();
 
         }
     }
