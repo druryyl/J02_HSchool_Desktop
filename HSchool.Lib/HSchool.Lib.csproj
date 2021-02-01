@@ -53,6 +53,7 @@
     <Compile Include="Dal\ParamNoDal.cs" />
     <Compile Include="Dal\PersonDal.cs" />
     <Compile Include="Dto\PersonAddDto.cs" />
+    <Compile Include="Dto\PersonSearchResultDto.cs" />
     <Compile Include="Helpers\AutoNumberHelper.cs" />
     <Compile Include="Helpers\ConnStringHelper.cs" />
     <Compile Include="Helpers\DapperHelper.cs" />

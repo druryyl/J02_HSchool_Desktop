@@ -1,4 +1,5 @@
-﻿using HSchool.Lib.Dto;
+﻿using HSchool.Lib.Dal;
+using HSchool.Lib.Dto;
 using HSchool.Lib.Models;
 using Intersolusi.Helper;
 using System;
@@ -12,9 +13,11 @@ namespace HSchool.Lib.BL
     public interface IPersonBL
     {
         PersonModel Person { get; set; }
-
+        IEnumerable<PersonSearchResultDto> SearchResult { get; set; }
         void Save();
         void Remove();
+
+
 
     }
     public class PersonBL : IPersonBL
@@ -38,7 +41,7 @@ namespace HSchool.Lib.BL
                 PersonID = string.Empty,
                 PersonName = string.Empty,
                 NickName = string.Empty,
-                BirthDate = new DateTime(1, 1, 1900),
+                BirthDate = new DateTime(1900,1,1),
                 BirthPlace = string.Empty,
                 Gender = GenderEnum.Male,
 
@@ -51,6 +54,8 @@ namespace HSchool.Lib.BL
         }
 
         public PersonModel Person { get; set; }
+        public IEnumerable<PersonSearchResultDto> SearchResult { get; set; }
+
 
         public void Save()
         {
@@ -86,5 +91,6 @@ namespace HSchool.Lib.BL
         {
             throw new NotImplementedException();
         }
+
     }
 }

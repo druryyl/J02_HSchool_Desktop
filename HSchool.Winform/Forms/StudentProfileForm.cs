@@ -13,12 +13,10 @@ namespace HSchool.Winform.Forms
 {
     public partial class StudentProfileForm : Form
     {
-        private IPersonBL _personBL;
-        public StudentProfileForm(IPersonBL personBL)
+        public StudentProfileForm()
         {
             InitializeComponent();
 
-            _personBL = personBL;
 
             var listStudent = new List<StudentModel>
             {

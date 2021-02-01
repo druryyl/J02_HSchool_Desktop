@@ -2,6 +2,8 @@
 using HSchool.Lib.BL;
 using HSchool.Lib.Dal;
 using HSchool.Winform.Forms;
+using HSchool.Winform.Presenters;
+using HSchool.Winform.View;
 using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
@@ -19,19 +21,20 @@ namespace HSchool.Winform
 {
     public partial class MainForm : Form
     {
-
+        private readonly UnityContainer _container;
 
         public MainForm()
         {
             InitializeComponent();
             this.ResizeEnd += delegate { this.Refresh(); };
 
-            var container = new UnityContainer();
-            container.RegisterType<IParamNoDal, ParamNoDal>();
-            container.RegisterType<IParamNoBL, ParamNoBL>();
-            container.RegisterType<IPersonDal, PersonDal>();
-            container.RegisterType<IPersonBL, PersonBL>();
+            _container = new UnityContainer();
+            _container.RegisterType<IParamNoDal, ParamNoDal>();
+            _container.RegisterType<IParamNoBL, ParamNoBL>();
+            _container.RegisterType<IPersonDal, PersonDal>();
+            _container.RegisterType<IPersonBL, PersonBL>();
 
+            _container.RegisterType<IPersonView, PersonForm>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,18 +57,20 @@ namespace HSchool.Winform
             switch (menu.Name)
             {
                 case "ProfileMenu":
-                    form = new StudentProfileForm();
+                    var presenter = _container.Resolve<PersonPresenter>();
+                    presenter.Show();
+                    //form = _container.Resolve<PersonForm>();
                     break;
                 case "RegistrationMenu":
                     form = new RegisterForm();
+                    form.StartPosition = FormStartPosition.CenterScreen;
+                    form.MdiParent = this;
+                    form.Show();
                     break;
                 default:
                     break;
             }
 
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.MdiParent = this;
-            form.Show();
         }
     }
 }
