@@ -84,8 +84,12 @@ namespace Intersolusi.Helper
 
             var param = new ParamNoModel
             {
-                ParamID = $"{prefix}-{periode}"
+                ParamID = $"{prefix}{periode}"
             };
+            //  jika simple number, ga pake periode
+            if (length == ParamNoLengthEnum.Code_5)
+                param.ParamID = prefix;
+
             var noUrutHex = GenNewID(param);
             var random = new Random();
             var num = random.Next(0, 15);
@@ -100,13 +104,13 @@ namespace Intersolusi.Helper
                     break;
                 case ParamNoLengthEnum.Code_12:
                     noUrutBlok = $"-{noUrutHex.PadLeft(4, '0')}";
-                    periode = $"-{periode}";
+                    periode = $"{periode}";
                     checkDigit = $"-{checkDigit}";
                     break;
                 case ParamNoLengthEnum.Code_14:
                     noUrutBlok = $"{noUrutHex.PadLeft(5, '0')}";
                     noUrutBlok = $"{noUrutBlok.Substring(0, 2)}-{noUrutBlok.Substring(2, 3)}";
-                    periode = $"-{periode}";
+                    periode = $"{periode}";
                     checkDigit = $"-{checkDigit}";
                     break;
                 default:

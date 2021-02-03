@@ -29,12 +29,12 @@ namespace HSchool.Lib.Dal
                     PersonID, PersonName, NickName,
                     BirthDate, BirthPlace, Gender,
                     FullAddr, ShortAddr, City,
-                    PhoneNo, Email)
+                    PhoneNo, Email, stmpcrt, stmpupd)
                 VALUES (
                     @PersonID, @PersonName, @NickName,
                     @BirthDate, @BirthPlace, @Gender,
                     @FullAddr, @ShortAddr, @City,
-                    @PhoneNo, @Email) ";
+                    @PhoneNo, @Email, @stmpcrt, @stmpupd) ";
 
             var dp = new DynamicParameters();
             dp.AddParam("@PersonID", person.PersonID, SqlDbType.VarChar);
@@ -52,6 +52,8 @@ namespace HSchool.Lib.Dal
             dp.AddParam("@PhoneNo", person.PhoneNo, SqlDbType.VarChar);
             dp.AddParam("@Email", person.Email, SqlDbType.VarChar);
 
+            dp.AddParam(@"StmpCrt", person.StmpCrt, SqlDbType.DateTime);
+            dp.AddParam("@StmpUpd", person.StmpUpd, SqlDbType.DateTime);
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 conn.Execute(sql, dp);
         }

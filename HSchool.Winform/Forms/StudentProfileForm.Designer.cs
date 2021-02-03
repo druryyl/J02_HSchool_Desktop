@@ -114,7 +114,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(857, 606);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(854, 606);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -131,7 +131,7 @@
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(847, 546);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(844, 546);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // flowLayoutPanel4
@@ -563,7 +563,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(847, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 40);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.InputPanel_Paint);
             // 
@@ -571,7 +571,7 @@
             // 
             this.ExitButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Location = new System.Drawing.Point(759, 8);
+            this.ExitButton.Location = new System.Drawing.Point(756, 8);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 1;
@@ -582,7 +582,7 @@
             // 
             this.SaveButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Location = new System.Drawing.Point(678, 8);
+            this.SaveButton.Location = new System.Drawing.Point(675, 8);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 0;
@@ -593,7 +593,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(597, 8);
+            this.button1.Location = new System.Drawing.Point(594, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -604,7 +604,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(516, 8);
+            this.button2.Location = new System.Drawing.Point(513, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -624,8 +624,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1146, 606);
-            this.splitContainer1.SplitterDistance = 285;
+            this.splitContainer1.Size = new System.Drawing.Size(1142, 606);
+            this.splitContainer1.SplitterDistance = 284;
             this.splitContainer1.TabIndex = 2;
             // 
             // panel1
@@ -637,7 +637,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 606);
+            this.panel1.Size = new System.Drawing.Size(284, 606);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -649,7 +649,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(5, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(280, 555);
+            this.dataGridView1.Size = new System.Drawing.Size(279, 555);
             this.dataGridView1.TabIndex = 7;
             // 
             // textBox17
@@ -658,7 +658,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox17.Location = new System.Drawing.Point(3, 579);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(281, 22);
+            this.textBox17.Size = new System.Drawing.Size(280, 22);
             this.textBox17.TabIndex = 6;
             // 
             // label18
@@ -677,7 +677,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(1146, 606);
+            this.ClientSize = new System.Drawing.Size(1142, 606);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "StudentProfileForm";

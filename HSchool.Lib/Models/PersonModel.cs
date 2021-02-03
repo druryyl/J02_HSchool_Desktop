@@ -29,5 +29,8 @@ namespace HSchool.Lib.Models
         public string City { get; set; }
         public string PhoneNo { get; set; }
         public string Email { get; set; }
+
+        public DateTime StmpCrt { get; set; }
+        public DateTime StmpUpd { get; set; }
     }
 }
