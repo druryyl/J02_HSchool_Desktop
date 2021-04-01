@@ -55,7 +55,6 @@
   <ItemGroup>
     <Compile Include="BL\PersonBL.cs" />
     <Compile Include="BL\StudentBL.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Dal\ParamNoDal.cs" />
     <Compile Include="Dal\PersonDal.cs" />
     <Compile Include="Dto\PersonAddDto.cs" />

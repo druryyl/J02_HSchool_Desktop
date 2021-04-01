@@ -29,6 +29,7 @@ namespace HSchool.Winform.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.SearchResultGrid = new System.Windows.Forms.DataGridView();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
@@ -59,8 +60,28 @@ namespace HSchool.Winform.Forms
             this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +92,10 @@ namespace HSchool.Winform.Forms
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel7.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -88,7 +113,7 @@ namespace HSchool.Winform.Forms
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(537, 585);
+            this.splitContainer1.Size = new System.Drawing.Size(1082, 570);
             this.splitContainer1.SplitterDistance = 260;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -99,7 +124,7 @@ namespace HSchool.Winform.Forms
             this.SearchResultGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchResultGrid.Location = new System.Drawing.Point(0, 22);
             this.SearchResultGrid.Name = "SearchResultGrid";
-            this.SearchResultGrid.Size = new System.Drawing.Size(260, 563);
+            this.SearchResultGrid.Size = new System.Drawing.Size(260, 548);
             this.SearchResultGrid.TabIndex = 14;
             // 
             // SearchTextBox
@@ -124,19 +149,22 @@ namespace HSchool.Winform.Forms
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(273, 585);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(818, 570);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Azure;
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel6);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(267, 539);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(812, 524);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -153,9 +181,9 @@ namespace HSchool.Winform.Forms
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.PersonIDTextBox);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 263);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 254);
+            this.panel1.Size = new System.Drawing.Size(259, 254);
             this.panel1.TabIndex = 0;
             // 
             // NickNameTextBox
@@ -262,6 +290,7 @@ namespace HSchool.Winform.Forms
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Honeydew;
             this.panel2.Controls.Add(this.EmailTextBox);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.CityTextBox);
@@ -272,7 +301,7 @@ namespace HSchool.Winform.Forms
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.AddressTextBox);
             this.panel2.Controls.Add(this.Address);
-            this.panel2.Location = new System.Drawing.Point(3, 263);
+            this.panel2.Location = new System.Drawing.Point(268, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 254);
             this.panel2.TabIndex = 1;
@@ -364,16 +393,26 @@ namespace HSchool.Winform.Forms
             this.flowLayoutPanel2.Controls.Add(this.SaveButton);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 548);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 533);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(267, 34);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(812, 34);
             this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.DeleteButton.Location = new System.Drawing.Point(730, 5);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.TabIndex = 12;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = false;
             // 
             // SaveButton
             // 
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.SaveButton.Location = new System.Drawing.Point(104, 5);
+            this.SaveButton.Location = new System.Drawing.Point(649, 5);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 11;
@@ -381,22 +420,201 @@ namespace HSchool.Winform.Forms
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // DeleteButton
+            // flowLayoutPanel7
             // 
-            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.DeleteButton.Location = new System.Drawing.Point(185, 5);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteButton.TabIndex = 12;
-            this.DeleteButton.Text = "Delete";
-            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.flowLayoutPanel7.BackColor = System.Drawing.Color.LavenderBlush;
+            this.flowLayoutPanel7.Controls.Add(this.label14);
+            this.flowLayoutPanel7.Controls.Add(this.textBox14);
+            this.flowLayoutPanel7.Controls.Add(this.label15);
+            this.flowLayoutPanel7.Controls.Add(this.comboBox2);
+            this.flowLayoutPanel7.Controls.Add(this.label16);
+            this.flowLayoutPanel7.Controls.Add(this.textBox15);
+            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(531, 3);
+            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
+            this.flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(273, 514);
+            this.flowLayoutPanel7.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Medical Note";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(8, 21);
+            this.textBox14.Multiline = true;
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(257, 170);
+            this.textBox14.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 194);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 13);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Blood Type";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(8, 210);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(257, 21);
+            this.comboBox2.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 234);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Special Note";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(8, 250);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(257, 255);
+            this.textBox15.TabIndex = 13;
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.BackColor = System.Drawing.Color.Ivory;
+            this.flowLayoutPanel6.Controls.Add(this.label10);
+            this.flowLayoutPanel6.Controls.Add(this.textBox6);
+            this.flowLayoutPanel6.Controls.Add(this.label12);
+            this.flowLayoutPanel6.Controls.Add(this.textBox7);
+            this.flowLayoutPanel6.Controls.Add(this.label13);
+            this.flowLayoutPanel6.Controls.Add(this.textBox8);
+            this.flowLayoutPanel6.Controls.Add(this.label17);
+            this.flowLayoutPanel6.Controls.Add(this.textBox13);
+            this.flowLayoutPanel6.Controls.Add(this.label18);
+            this.flowLayoutPanel6.Controls.Add(this.textBox16);
+            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(268, 263);
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(257, 254);
+            this.flowLayoutPanel6.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(8, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(77, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Mother Name";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(8, 21);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(243, 22);
+            this.textBox6.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Mother\'s Phone Number";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(8, 62);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(243, 22);
+            this.textBox7.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Father Name";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(8, 103);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(243, 22);
+            this.textBox8.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 128);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(128, 13);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Father\'s Phone Number";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(8, 144);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(243, 22);
+            this.textBox13.TabIndex = 9;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 169);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(67, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "Family Note";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(8, 185);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(243, 60);
+            this.textBox16.TabIndex = 14;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Controls.Add(this.pictureBox1);
+            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(259, 254);
+            this.flowLayoutPanel4.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(243, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 585);
+            this.ClientSize = new System.Drawing.Size(1082, 570);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PersonForm";
@@ -414,6 +632,12 @@ namespace HSchool.Winform.Forms
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel7.ResumeLayout(false);
+            this.flowLayoutPanel7.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel6.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,5 +676,25 @@ namespace HSchool.Winform.Forms
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

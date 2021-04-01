@@ -71,8 +71,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -342,7 +342,7 @@
             this.textBox11.Location = new System.Drawing.Point(8, 184);
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(257, 105);
+            this.textBox11.Size = new System.Drawing.Size(257, 151);
             this.textBox11.TabIndex = 22;
             // 
             // flowLayoutPanel3
@@ -535,17 +535,6 @@
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
             // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Location = new System.Drawing.Point(595, 8);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveButton.TabIndex = 0;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightGoldenrodYellow;
@@ -556,6 +545,17 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Location = new System.Drawing.Point(595, 8);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 0;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
