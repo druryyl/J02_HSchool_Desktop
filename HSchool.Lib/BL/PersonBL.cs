@@ -14,11 +14,12 @@ namespace HSchool.Lib.BL
 {
     public interface IPersonBL
     {
-        PersonModel Person { get; set; }
+        PersonModel Person { get; }
         IEnumerable<PersonSearchResultDto> SearchResult { get; set; }
-        void Save();
-        void Remove();
-        void Search(string keyword);
+        IPersonBL GetData(IPersonKey person);
+        IPersonBL Add();
+        IPersonBL Remove();
+        IEnumerable<PersonModel>Search(string keyword);
     }
     public class PersonBL : IPersonBL
     {
@@ -56,6 +57,10 @@ namespace HSchool.Lib.BL
         public PersonModel Person { get; set; }
         public IEnumerable<PersonSearchResultDto> SearchResult { get; set; }
 
+        public void GetData(IPersonKey person)
+        {
+            Person = _personDal.GetData(person);
+        }
 
         public void Save()
         {
@@ -95,6 +100,12 @@ namespace HSchool.Lib.BL
         public void Search(string keyword)
         {
             var listPerson = _personDal.ListData();
+            if (listPerson is null)
+            {
+                SearchResult = new List<PersonSearchResultDto>();
+                return;
+            }
+
             keyword = keyword.ToLower();
 
             //  search name
@@ -115,10 +126,13 @@ namespace HSchool.Lib.BL
             var resultAll = new List<PersonModel>();
             if (listByName.Any())
                 resultAll.AddRange(listByName);
+            
             if (listByNick.Any())
                 resultAll.AddRange(listByNick);
-            if (listByTglLahir.Any())
-                resultAll.AddRange(listByTglLahir);
+
+            if (listByTglLahir != null)
+                if (listByTglLahir.Any())
+                    resultAll.AddRange(listByTglLahir);
 
             var resultDistinct = resultAll
                 .DistinctBy(x => x.PersonID);
@@ -128,8 +142,13 @@ namespace HSchool.Lib.BL
                     .Select(r => new PersonSearchResultDto
                     {
                         PersonID = r.PersonID,
-                        PersonName = r.PersonName
-                    });
+                        PersonName = r.PersonName,
+                        LastUpdate = r.StmpUpd
+                    })
+                    .OrderByDescending(x => x.LastUpdate)
+                    .Take(50);
+            else
+                SearchResult = new List<PersonSearchResultDto>();
         }
     }
 }

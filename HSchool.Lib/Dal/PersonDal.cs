@@ -52,8 +52,8 @@ namespace HSchool.Lib.Dal
             dp.AddParam("@PhoneNo", person.PhoneNo, SqlDbType.VarChar);
             dp.AddParam("@Email", person.Email, SqlDbType.VarChar);
 
-            dp.AddParam(@"StmpCrt", person.StmpCrt, SqlDbType.DateTime);
-            dp.AddParam("@StmpUpd", person.StmpUpd, SqlDbType.DateTime);
+            dp.AddParam("@StmpCrt", DateTime.Now, SqlDbType.DateTime);
+            dp.AddParam("@StmpUpd", DateTime.Now, SqlDbType.DateTime);
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 conn.Execute(sql, dp);
         }
@@ -73,7 +73,8 @@ namespace HSchool.Lib.Dal
                     ShortAddr = @ShortAddr, 
                     City = @City,
                     PhoneNo = @PhoneNo, 
-                    Email = @Email
+                    Email = @Email,
+                    StmpUpd = @StmpUpd
                 WHERE
                     PersonID = @PersonID ";
 
@@ -92,6 +93,8 @@ namespace HSchool.Lib.Dal
 
             dp.AddParam("@PhoneNo", person.PhoneNo, SqlDbType.VarChar);
             dp.AddParam("@Email", person.Email, SqlDbType.VarChar);
+
+            dp.AddParam("@StmpUpd", DateTime.Now, SqlDbType.DateTime);
 
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 conn.Execute(sql, dp);
@@ -119,7 +122,8 @@ namespace HSchool.Lib.Dal
                     PersonID, PersonName, NickName,
                     BirthDate, BirthPlace, Gender,
                     FullAddr, ShortAddr, City,
-                    PhoneNo, Email
+                    PhoneNo, Email, 
+                    StmpCrt, StmpUpd
                 FROM
                     HSOL_Person
                 WHERE
@@ -139,7 +143,8 @@ namespace HSchool.Lib.Dal
                     PersonID, PersonName, NickName,
                     BirthDate, BirthPlace, Gender,
                     FullAddr, ShortAddr, City,
-                    PhoneNo, Email
+                    PhoneNo, Email,
+                    StmpCrt, StmpUpd
                 FROM
                     HSOL_Person ";
 

@@ -23,13 +23,42 @@ namespace HSchool.Winform.Forms
             InitializeComponent();
             _personBL = personBL;
             _searchResultBinding = new BindingSource();
-            _searchResultBinding.DataSource = _personBL.SearchResult;
+            SearchResultGrid.DataSource = _searchResultBinding;
+            SearchResultGrid.ReadOnly = true;
+            ClearScreen();
+            Search();
+
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             SetData();
-            _personBL.Save();
+            try
+            {
+                _personBL.Save();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            ClearScreen();
+            Search();
+        }
+        private void ClearScreen()
+        {
+            PersonIDTextBox.Text = string.Empty;
+            FullNameTextBox.Text = string.Empty;
+            NickNameTextBox.Text = string.Empty;
+            BirthDateDatePicker.Value = DateTime.Now;
+            BirthPlaceTextBox.Text = string.Empty;
+            GenderComboBox.SelectedIndex = 0;
+
+            AddressTextBox.Text = string.Empty;
+            ShortAddressTextBox.Text = string.Empty;
+            CityTextBox.Text = string.Empty;
+            PhoneNoTextBox.Text = string.Empty;
+            EmailTextBox.Text =  string.Empty;
         }
 
         private void SetData()
@@ -54,15 +83,26 @@ namespace HSchool.Winform.Forms
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            var ctrl = (TextBox)sender;
-            if (ctrl == SearchTextBox)
-                Search();
+            if(e.KeyCode == Keys.Enter)
+            {
+                var ctrl = (TextBox)sender;
+                if (ctrl == SearchTextBox)
+                    Search();
+            }
         }
 
         private void Search()
         {
             _personBL.Search(SearchTextBox.Text);
-            _searchResultBinding.ResetBindings(false);
+            _searchResultBinding.DataSource = _personBL.SearchResult;
+            SearchResultGrid.Columns["LastUpdate"].Visible = false;
+        }
+
+        private void Edit(int rowNum)
+        {
+            var key = SearchResultGrid.Rows[rowNum].Cells["PersonID"].Value.ToString();
+            //_personBL.GetData(key);
+            SetData();
         }
     }
 }

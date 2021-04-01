@@ -100,7 +100,7 @@ namespace HSchool.Winform.Forms
             this.SearchResultGrid.Location = new System.Drawing.Point(0, 22);
             this.SearchResultGrid.Name = "SearchResultGrid";
             this.SearchResultGrid.Size = new System.Drawing.Size(260, 563);
-            this.SearchResultGrid.TabIndex = 1;
+            this.SearchResultGrid.TabIndex = 14;
             // 
             // SearchTextBox
             // 
@@ -108,7 +108,7 @@ namespace HSchool.Winform.Forms
             this.SearchTextBox.Location = new System.Drawing.Point(0, 0);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(260, 22);
-            this.SearchTextBox.TabIndex = 0;
+            this.SearchTextBox.TabIndex = 13;
             this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // tableLayoutPanel1
@@ -163,7 +163,7 @@ namespace HSchool.Winform.Forms
             this.NickNameTextBox.Location = new System.Drawing.Point(6, 101);
             this.NickNameTextBox.Name = "NickNameTextBox";
             this.NickNameTextBox.Size = new System.Drawing.Size(245, 22);
-            this.NickNameTextBox.TabIndex = 11;
+            this.NickNameTextBox.TabIndex = 3;
             // 
             // label6
             // 
@@ -200,7 +200,7 @@ namespace HSchool.Winform.Forms
             this.BirthPlaceTextBox.Location = new System.Drawing.Point(6, 183);
             this.BirthPlaceTextBox.Name = "BirthPlaceTextBox";
             this.BirthPlaceTextBox.Size = new System.Drawing.Size(245, 22);
-            this.BirthPlaceTextBox.TabIndex = 7;
+            this.BirthPlaceTextBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -216,7 +216,7 @@ namespace HSchool.Winform.Forms
             this.BirthDateDatePicker.Location = new System.Drawing.Point(6, 142);
             this.BirthDateDatePicker.Name = "BirthDateDatePicker";
             this.BirthDateDatePicker.Size = new System.Drawing.Size(245, 22);
-            this.BirthDateDatePicker.TabIndex = 5;
+            this.BirthDateDatePicker.TabIndex = 4;
             // 
             // label3
             // 
@@ -232,7 +232,7 @@ namespace HSchool.Winform.Forms
             this.FullNameTextBox.Location = new System.Drawing.Point(6, 60);
             this.FullNameTextBox.Name = "FullNameTextBox";
             this.FullNameTextBox.Size = new System.Drawing.Size(245, 22);
-            this.FullNameTextBox.TabIndex = 3;
+            this.FullNameTextBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -282,7 +282,7 @@ namespace HSchool.Winform.Forms
             this.EmailTextBox.Location = new System.Drawing.Point(6, 224);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(245, 22);
-            this.EmailTextBox.TabIndex = 13;
+            this.EmailTextBox.TabIndex = 10;
             // 
             // label8
             // 
@@ -298,7 +298,7 @@ namespace HSchool.Winform.Forms
             this.CityTextBox.Location = new System.Drawing.Point(6, 142);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(245, 22);
-            this.CityTextBox.TabIndex = 11;
+            this.CityTextBox.TabIndex = 8;
             // 
             // label7
             // 
@@ -314,7 +314,7 @@ namespace HSchool.Winform.Forms
             this.PhoneNoTextBox.Location = new System.Drawing.Point(6, 183);
             this.PhoneNoTextBox.Name = "PhoneNoTextBox";
             this.PhoneNoTextBox.Size = new System.Drawing.Size(245, 22);
-            this.PhoneNoTextBox.TabIndex = 7;
+            this.PhoneNoTextBox.TabIndex = 9;
             // 
             // label9
             // 
@@ -330,7 +330,7 @@ namespace HSchool.Winform.Forms
             this.ShortAddressTextBox.Location = new System.Drawing.Point(6, 101);
             this.ShortAddressTextBox.Name = "ShortAddressTextBox";
             this.ShortAddressTextBox.Size = new System.Drawing.Size(245, 22);
-            this.ShortAddressTextBox.TabIndex = 3;
+            this.ShortAddressTextBox.TabIndex = 7;
             // 
             // label11
             // 
@@ -347,7 +347,7 @@ namespace HSchool.Winform.Forms
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(245, 63);
-            this.AddressTextBox.TabIndex = 1;
+            this.AddressTextBox.TabIndex = 6;
             // 
             // Address
             // 
@@ -360,8 +360,8 @@ namespace HSchool.Winform.Forms
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.SaveButton);
             this.flowLayoutPanel2.Controls.Add(this.DeleteButton);
+            this.flowLayoutPanel2.Controls.Add(this.SaveButton);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 548);
@@ -373,10 +373,10 @@ namespace HSchool.Winform.Forms
             // SaveButton
             // 
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.SaveButton.Location = new System.Drawing.Point(185, 5);
+            this.SaveButton.Location = new System.Drawing.Point(104, 5);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveButton.TabIndex = 0;
+            this.SaveButton.TabIndex = 11;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
@@ -384,10 +384,10 @@ namespace HSchool.Winform.Forms
             // DeleteButton
             // 
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.DeleteButton.Location = new System.Drawing.Point(104, 5);
+            this.DeleteButton.Location = new System.Drawing.Point(185, 5);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteButton.TabIndex = 1;
+            this.DeleteButton.TabIndex = 12;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = false;
             // 

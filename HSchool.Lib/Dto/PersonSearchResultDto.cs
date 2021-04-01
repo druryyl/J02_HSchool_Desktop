@@ -10,5 +10,6 @@ namespace HSchool.Lib.Dto
     {
         public string PersonID { get; set; }
         public string PersonName { get; set; }
+        public DateTime LastUpdate { get; set; }
     }
 }

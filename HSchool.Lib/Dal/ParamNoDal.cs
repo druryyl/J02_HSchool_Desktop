@@ -67,7 +67,7 @@ namespace HSchool.Lib.Dal
         {
             var sql = @"
                 SELECT
-                    ParamValue
+                    ParamID, ParamValue
                 FROM
                     HSOL_ParamNo
                 WHERE
