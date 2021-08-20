@@ -10,11 +10,10 @@ namespace HSchool.Lib.Models.Entity
     {
         string LevelID { get; set; }
     }
-    public class LevelEntity : ILevelKey
+    public class LevelEntity : ILevelKey, IGradeKey
     {
         public string LevelID { get; set; }
         public string LevelName { get; set; }
-        public int LevelIndex { get; set; }
         public string GradeID { get; set; }
         public string GradeName { get; set; }
     }

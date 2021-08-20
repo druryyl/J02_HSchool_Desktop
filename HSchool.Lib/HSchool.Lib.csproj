@@ -77,15 +77,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Mapper\GradeMap.cs" />
+    <Compile Include="BL\Mapper\LevelMap.cs" />
     <Compile Include="BL\PersonBL.cs" />
     <Compile Include="BL\StudentBL.cs" />
+    <Compile Include="BL\Validator\GradeValidator.cs" />
+    <Compile Include="BL\Validator\LevelValidator.cs" />
     <Compile Include="Dal\ParamNoDal.cs" />
     <Compile Include="Dal\PersonDal.cs" />
+    <Compile Include="Models\Dto\GradeDto.cs" />
+    <Compile Include="Models\Dto\LevelDto.cs" />
     <Compile Include="Models\Dto\PersonCreateDto.cs" />
     <Compile Include="Models\Dto\PersonSearchResultDto.cs" />
     <Compile Include="Helpers\ConnStringHelper.cs" />
     <Compile Include="Models\Dto\PersonUpdateDto.cs" />
     <Compile Include="Models\Entity\GradeEntity.cs" />
+    <Compile Include="Models\Entity\IGradeContext.cs" />
     <Compile Include="Models\Entity\LevelEntity.cs" />
     <Compile Include="Models\Entity\PersonEntity.cs" />
     <Compile Include="Models\Entity\StudentEntity.cs" />
