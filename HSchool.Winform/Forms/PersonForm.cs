@@ -1,5 +1,4 @@
 ﻿using HSchool.Lib.BL;
-using HSchool.Lib.Dto;
 using HSchool.Lib.Models;
 using System;
 using System.Collections.Generic;
@@ -35,7 +34,7 @@ namespace HSchool.Winform.Forms
             SetData();
             try
             {
-                _personBL.Save();
+                //_personBL.Save();
             }
             catch (Exception ex)
             {
@@ -58,12 +57,12 @@ namespace HSchool.Winform.Forms
             ShortAddressTextBox.Text = string.Empty;
             CityTextBox.Text = string.Empty;
             PhoneNoTextBox.Text = string.Empty;
-            EmailTextBox.Text =  string.Empty;
+            EmailTextBox.Text = string.Empty;
         }
 
         private void SetData()
         {
-            var person = new PersonModel
+            var person = new PersonEntity
             {
                 PersonID = PersonIDTextBox.Text,
                 PersonName = FullNameTextBox.Text,
@@ -78,12 +77,12 @@ namespace HSchool.Winform.Forms
                 PhoneNo = PhoneNoTextBox.Text,
                 Email = EmailTextBox.Text
             };
-            _personBL.Person = person;
+            //_personBL.Person = person;
         }
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 var ctrl = (TextBox)sender;
                 if (ctrl == SearchTextBox)
@@ -94,7 +93,7 @@ namespace HSchool.Winform.Forms
         private void Search()
         {
             _personBL.Search(SearchTextBox.Text);
-            _searchResultBinding.DataSource = _personBL.SearchResult;
+            //_searchResultBinding.DataSource = _personBL.SearchResult;
             SearchResultGrid.Columns["LastUpdate"].Visible = false;
         }
 

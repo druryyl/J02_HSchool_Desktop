@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using HSchool.Lib.Models;
 using Intersolusi.Helper;
+using Nuna.Lib.DataAccessHelper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,30 +12,31 @@ using System.Threading.Tasks;
 
 namespace HSchool.Lib.Dal
 {
-    public interface IPersonDal
+    public interface IPersonDal :
+        IInsert<PersonEntity>,
+        IUpdate<PersonEntity>,
+        IDelete<IPersonKey>,
+        IGetData<PersonEntity, IPersonKey>,
+        IListData<PersonEntity>
     {
-        void Insert(PersonModel person);
-        void Update(PersonModel person);
-        void Delete(IPersonKey person);
-        PersonModel GetData(IPersonKey person);
-        IEnumerable<PersonModel> ListData();
     }
 
     public class PersonDal : IPersonDal
     {
-        public void Insert(PersonModel person)
+        public void Insert(PersonEntity person)
         {
             var sql = @"
-                INSERT INTO HSOL_Person (
-                    PersonID, PersonName, NickName,
-                    BirthDate, BirthPlace, Gender,
-                    FullAddr, ShortAddr, City,
-                    PhoneNo, Email, stmpcrt, stmpupd)
+                INSERT INTO 
+                    HSOL_Person (
+                        PersonID, PersonName, NickName,
+                        BirthDate, BirthPlace, Gender,
+                        FullAddr, ShortAddr, City,
+                        PhoneNo, Email, stmpcrt, stmpupd)
                 VALUES (
-                    @PersonID, @PersonName, @NickName,
-                    @BirthDate, @BirthPlace, @Gender,
-                    @FullAddr, @ShortAddr, @City,
-                    @PhoneNo, @Email, @stmpcrt, @stmpupd) ";
+                        @PersonID, @PersonName, @NickName,
+                        @BirthDate, @BirthPlace, @Gender,
+                        @FullAddr, @ShortAddr, @City,
+                        @PhoneNo, @Email, @stmpcrt, @stmpupd) ";
 
             var dp = new DynamicParameters();
             dp.AddParam("@PersonID", person.PersonID, SqlDbType.VarChar);
@@ -58,7 +60,7 @@ namespace HSchool.Lib.Dal
                 conn.Execute(sql, dp);
         }
 
-        public void Update(PersonModel person)
+        public void Update(PersonEntity person)
         {
             var sql = @"
                 UPDATE
@@ -115,7 +117,7 @@ namespace HSchool.Lib.Dal
                 conn.Execute(sql, dp);
         }
 
-        public PersonModel GetData(IPersonKey person)
+        public PersonEntity GetData(IPersonKey person)
         {
             var sql = @"
                 SELECT
@@ -133,10 +135,10 @@ namespace HSchool.Lib.Dal
             dp.AddParam("@PersonID", person.PersonID, SqlDbType.VarChar);
 
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
-                return conn.ReadSingle<PersonModel>(sql, dp);
+                return conn.ReadSingle<PersonEntity>(sql, dp);
         }
 
-        public IEnumerable<PersonModel> ListData()
+        public IEnumerable<PersonEntity> ListData()
         {
             var sql = @"
                 SELECT
@@ -151,7 +153,7 @@ namespace HSchool.Lib.Dal
             var dp = new DynamicParameters();
 
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
-                return conn.Read<PersonModel>(sql, dp);
+                return conn.Read<PersonEntity>(sql, dp);
         }
     }
 }

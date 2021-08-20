@@ -12,9 +12,9 @@ namespace HSchool.Lib.BL
         StudentModel Student { get;}
 
         //  pendaftaran
-        void Apply(PersonModel person); 
+        void Apply(PersonEntity person); 
         //  penerimaan
-        void Register(PersonModel person);
+        void Register(PersonEntity person);
         void Graduate();
         void LevelUp();
     }
@@ -23,12 +23,12 @@ namespace HSchool.Lib.BL
     {
         public StudentModel Student { get; internal set; }
 
-        public void Apply(PersonModel person)
+        public void Apply(PersonEntity person)
         {
             throw new NotImplementedException();
         }
 
-        public void Register(PersonModel person)
+        public void Register(PersonEntity person)
         {
             throw new NotImplementedException();
         }

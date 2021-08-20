@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HSchool.Lib.Dto
+namespace HSchool.Lib.Models.Dto
 {
-    public class PersonAddDto
+    public class PersonCreateDto
     {
         public string PersonName { get; set; }
 
@@ -22,21 +22,5 @@ namespace HSchool.Lib.Dto
         public string City { get; set; }
         public string PhoneNo { get; set; }
         public string Email { get; set; }
-
-        public static explicit operator PersonAddDto(PersonModel model)
-        {
-            var result = new PersonAddDto
-            {
-                PersonName = model.PersonName,
-                BirthDate = model.BirthDate,
-                BirthPlace = model.BirthPlace,
-
-                FullAddr = model.FullAddr,
-                City = model.City,
-                PhoneNo = model.PhoneNo,
-                Email = model.Email,
-            };
-            return result;
-        }
     }
 }

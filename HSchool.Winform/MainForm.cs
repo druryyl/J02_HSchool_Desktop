@@ -27,10 +27,10 @@ namespace HSchool.Winform
             this.ResizeEnd += delegate { this.Refresh(); };
 
             _container = new UnityContainer();
-            _container.RegisterType<IParamNoDal, ParamNoDal>();
-            _container.RegisterType<IParamNoBL, ParamNoBL>();
-            _container.RegisterType<IPersonDal, PersonDal>();
-            _container.RegisterType<IPersonBL, PersonBL>();
+            //_container.RegisterType<IParamNoDal, ParamNoDal>();
+            //_container.RegisterType<IParamNoBL, ParamNoBL>();
+            //_container.RegisterType<IPersonDal, PersonDal>();
+            //_container.RegisterType<IPersonBL, PersonBL>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
