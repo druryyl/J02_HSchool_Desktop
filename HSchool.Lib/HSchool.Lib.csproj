@@ -79,6 +79,8 @@
   <ItemGroup>
     <Compile Include="BL\Builder\GradeBuilder.cs" />
     <Compile Include="BL\Builder\LevelBuilder.cs" />
+    <Compile Include="BL\Factory\GradeFactory.cs" />
+    <Compile Include="BL\Factory\LevelFactory.cs" />
     <Compile Include="BL\Mapper\GradeMap.cs" />
     <Compile Include="BL\Mapper\LevelMap.cs" />
     <Compile Include="BL\PersonBL.cs" />

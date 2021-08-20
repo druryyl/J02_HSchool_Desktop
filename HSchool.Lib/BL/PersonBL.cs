@@ -1,6 +1,5 @@
 ﻿using HSchool.Lib.Dal;
 using HSchool.Lib.Models;
-using Intersolusi.Helper;
 using MoreLinq;
 using Nuna.Lib.TransactionHelper;
 using System;

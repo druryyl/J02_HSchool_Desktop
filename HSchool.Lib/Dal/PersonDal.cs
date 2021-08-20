@@ -1,6 +1,6 @@
 ﻿using Dapper;
+using HSchool.Lib.Helper;
 using HSchool.Lib.Models;
-using Intersolusi.Helper;
 using Nuna.Lib.DataAccessHelper;
 using System;
 using System.Collections.Generic;
