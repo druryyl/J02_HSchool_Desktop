@@ -1,4 +1,5 @@
-﻿using HSchool.Lib.Models.Entity;
+﻿using HSchool.Lib.Models.Dto;
+using HSchool.Lib.Models.Entity;
 using Nuna.Lib.ModelingHelper;
 using System;
 using System.Collections.Generic;
@@ -11,18 +12,45 @@ namespace HSchool.Lib.Models
 
     public interface ILevelContext
     {
+        //  ROOT
         LevelEntity Level { get; }
+        //  VALUE OBJECT
+        GradeEntity Grade { get; }
+
     }
     public interface ILevelCommand
     {
-        //void Create(LevelCreateDto level);
-        //void Update(LevelUpdateDto level);
-        void Delete(ILevelKey key);
+        void Create(LevelCreateDto level);
+        void Update(LevelUpdateDto level);
+        void Delete(ILevelKey level);
     }
 
     public interface ILevelQuery
     {
-        LevelEntity GetData(ILevelKey key);
+        LevelEntity GetData(ILevelKey Level);
         IEnumerable<LevelEntity> ListData();
+        IEnumerable<LevelEntity> ListData(IGradeKey filter);
     }
+
+    //public interface ILevelContext
+    //{
+    //    //  ROOT
+    //    LevelEntity Level { get; }
+    //    //  VALUE OBJECT
+    //    GradeEntity Grade { get; }
+
+    //}
+    //public interface ILevelCommand
+    //{
+    //    void Create(LevelCreateDto level);
+    //    void Update(LevelUpdateDto level);
+    //    void Delete(ILevelKey level);
+    //}
+
+    //public interface ILevelQuery
+    //{
+    //    LevelEntity GetData(ILevelKey level);
+    //    IEnumerable<LevelEntity> ListData();
+    //    IEnumerable<LevelEntity> ListData(IGradeKey filter);
+    //}
 }

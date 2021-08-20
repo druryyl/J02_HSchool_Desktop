@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intersolusi.Helper
+namespace HSchool.Lib.Helper
 {
     public static class ConnStringHelper
     {

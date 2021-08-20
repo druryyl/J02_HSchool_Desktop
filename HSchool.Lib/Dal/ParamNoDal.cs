@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Intersolusi.Helper;
 using Nuna.Lib.AutoNumberHelper;
 using System;
 using System.Collections.Generic;

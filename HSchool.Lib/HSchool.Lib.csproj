@@ -77,12 +77,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Builder\GradeBuilder.cs" />
+    <Compile Include="BL\Builder\LevelBuilder.cs" />
     <Compile Include="BL\Mapper\GradeMap.cs" />
     <Compile Include="BL\Mapper\LevelMap.cs" />
     <Compile Include="BL\PersonBL.cs" />
     <Compile Include="BL\StudentBL.cs" />
     <Compile Include="BL\Validator\GradeValidator.cs" />
     <Compile Include="BL\Validator\LevelValidator.cs" />
+    <Compile Include="Dal\GradeDal.cs" />
+    <Compile Include="Dal\LevelDal.cs" />
     <Compile Include="Dal\ParamNoDal.cs" />
     <Compile Include="Dal\PersonDal.cs" />
     <Compile Include="Models\Dto\GradeDto.cs" />
