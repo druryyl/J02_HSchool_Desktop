@@ -1,0 +1,167 @@
+﻿    public class $MainClass$ValidatorTest
+    {
+        private readonly IValidator<I$MainClass$Context> _validator;
+
+        public $MainClass$ValidatorTest()
+        {
+            _validator = new $MainClass$Validator();
+        }
+
+        private class Context : I$MainClass$Context
+        {
+            public Context($MainClass$Entity $MainObject$, $LookUpClass$Entity $LookUpObject$)
+            {
+                $MainClass$ = $MainObject$;
+                $LookUpClass$ = $LookUpObject$;
+            }
+            public $MainClass$Entity $MainClass$ { get; }
+            public $LookUpClass$Entity $LookUpClass$ { get; }
+            public bool IsDeleted {get; }
+        }
+
+        public $MainClass$Entity $MainClass$() =>
+            new $MainClass$Entity
+            {
+                $MainClass$ID = "A1",
+                $MainClass$Name = "A2",
+                $LookUpClass$ID = "A3",
+                $LookUpClass$Name = "A4"
+            };
+
+
+        public $LookUpClass$Entity $LookUpClass$() =>
+            new $LookUpClass$Entity
+            {
+                $LookUpClass$ID = "A3",
+                $LookUpClass$Name = "A4"
+            };
+
+        [Fact]
+        public void ValidTest()
+        {
+            //  ARRANGE
+            var context = new Context($MainClass$(), $LookUpClass$());
+
+            //  ACT
+            _validator.ValidateAndThrow(context);
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_100_Context_Kosong()
+        {
+            //  ARRANGE
+            Context context = null;
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-100");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_101_$MainClass$_Kosong()
+        {
+            //  ARRANGE
+            var context = new Context(null, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-101");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_102_$MainClass$_Kosong()
+        {
+            //  ARRANGE
+            var context = new Context($MainClass$(), null);
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-102");
+        }
+
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_201_Nama$MainClass$_Kosong()
+        {
+            //  ARRANGE
+            var $MainObject$ = $MainClass$();
+            $MainObject$.$MainClass$Name = string.Empty;
+            var context = new Context($MainObject$, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-201");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_202_Nama$MainClass$_PanjangLebihDari$NameLength$()
+        {
+            //  ARRANGE
+            var $MainObject$ = $MainClass$();
+            $MainObject$.$MainClass$Name = new String('A', $NameLength$ + 1);
+            var context = new Context($MainObject$, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-202");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_203_$LookUpClass$ID_Kosong()
+        {
+            //  ARRANGE
+            var $MainObject$ = $MainClass$();
+            $MainObject$.$LookUpClass$ID = string.Empty;
+            var context = new Context($MainObject$, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-203");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_204_$LookUpClass$Name_Kosong()
+        {
+            //  ARRANGE
+            var $MainObject$ = $MainClass$();
+            $MainObject$.$LookUpClass$Name = string.Empty;
+            var context = new Context($MainObject$, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-204");
+        }
+
+        [Fact]
+        public void ERR_$ErrorPrefix$_205_$LookUpClass$Name_BedaDgnLookup()
+        {
+            //  ARRANGE
+            var $MainObject$ = $MainClass$();
+            $MainObject$.$LookUpClass$Name = "X";
+            var context = new Context($MainObject$, $LookUpClass$());
+
+            //  ACT
+            var result = _validator.TestValidate(context);
+
+            //  ASSERT
+            result.ShouldHaveAnyValidationError()
+                .WithErrorCode("ERR-$ErrorPrefix$-205");
+        }
+    }

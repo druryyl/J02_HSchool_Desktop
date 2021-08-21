@@ -27,7 +27,7 @@ namespace HSchool.Lib.Dal
             //  QUERY
             var sql = @"
                 INSERT INTO
-                    VAKSN_Grade (
+                    HSOL_Grade (
                         GradeID, GradeName)
                 VALUES (
                         @GradeID, @GradeName)";
@@ -47,7 +47,7 @@ namespace HSchool.Lib.Dal
             //  QUERY
             var sql = @"
                 UPDATE
-                    VAKSN_Grade 
+                    HSOL_Grade 
                 SET
                     GradeName = @GradeName
                 WHERE
@@ -68,7 +68,7 @@ namespace HSchool.Lib.Dal
             //  QUERY
             var sql = @"
                 DELETE
-                    VAKSN_Grade 
+                    HSOL_Grade 
                 WHERE
                     GradeID = @GradeID ";
 
@@ -88,7 +88,7 @@ namespace HSchool.Lib.Dal
                 SELECT
                     GradeID, GradeName
                 FROM
-                    VAKSN_Grade 
+                    HSOL_Grade 
                 WHERE
                     GradeID = @GradeID ";
 
@@ -108,7 +108,7 @@ namespace HSchool.Lib.Dal
                 SELECT
                     GradeID, GradeName
                 FROM
-                    VAKSN_Grade";
+                    HSOL_Grade";
 
             //  EXECUTE
             using (var conn = new SqlConnection(ConnStringHelper.Get()))

@@ -11,20 +11,23 @@ using Xunit;
 
 namespace HSchool.Test.DalTest
 {
-    public class GradeDalTest
-    {
-        private readonly IGradeDal _gradeDal;
 
-        public GradeDalTest()
+    public class LevelDalTest
+    {
+        private readonly ILevelDal _levelDal;
+
+        public LevelDalTest()
         {
-            _gradeDal = new GradeDal();
+            _levelDal = new LevelDal();
         }
 
-        private GradeEntity Grade() =>
-            new GradeEntity
+        private LevelEntity Level() =>
+            new LevelEntity
             {
-                GradeID = "A1",
-                GradeName = "A2"
+                LevelID = "A1",
+                LevelName = "A2",
+                GradeID = "A3",
+                GradeName = ""
             };
 
         [Fact]
@@ -33,7 +36,7 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ACT
-                _gradeDal.Insert(Grade());
+                _levelDal.Insert(Level());
             }
         }
 
@@ -43,10 +46,10 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                _gradeDal.Insert(Grade());
+                _levelDal.Insert(Level());
 
                 //  ACT
-                _gradeDal.Update(Grade());
+                _levelDal.Update(Level());
             }
         }
 
@@ -56,10 +59,10 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                _gradeDal.Insert(Grade());
+                _levelDal.Insert(Level());
 
                 //  ACT
-                _gradeDal.Delete(Grade());
+                _levelDal.Delete(Level());
             }
         }
 
@@ -69,11 +72,11 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                var expected = Grade();
-                _gradeDal.Insert(expected);
+                var expected = Level();
+                _levelDal.Insert(expected);
 
                 //  ACT
-                var actual = _gradeDal.GetData(Grade());
+                var actual = _levelDal.GetData(Level());
 
                 //  ASSERT
                 actual.Should().BeEquivalentTo(expected);
@@ -81,16 +84,16 @@ namespace HSchool.Test.DalTest
         }
 
         [Fact]
-        public void ListDataTest()
+        public void ListDataByGradeTest()
         {
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                var expected = new List<GradeEntity> { Grade() };
-                _gradeDal.Insert(Grade());
+                var expected = new List<LevelEntity> { Level() };
+                _levelDal.Insert(Level());
 
                 //  ACT
-                var actual = _gradeDal.ListData();
+                var actual = _levelDal.ListData(Level());
 
                 //  ASSERT
                 actual.Should().BeEquivalentTo(expected);

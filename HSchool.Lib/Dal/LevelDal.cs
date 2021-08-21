@@ -91,7 +91,7 @@ namespace HSchool.Lib.Dal
             var sql = @"
                 SELECT
                     aa.LevelID, aa.LevelName, aa.GradeID,
-                    ISNULL(bb.GradeName) GradeName
+                    ISNULL(bb.GradeName, '') GradeName
                 FROM
                     HSOL_Level aa
                     LEFT JOIN HSOL_Grade bb ON aa.GradeID = bb.GradeID
@@ -113,7 +113,7 @@ namespace HSchool.Lib.Dal
             var sql = @"
                 SELECT
                     aa.LevelID, aa.LevelName, aa.GradeID,
-                    ISNULL(bb.GradeName) GradeName
+                    ISNULL(bb.GradeName, '') GradeName
                 FROM
                     HSOL_Level aa
                     LEFT JOIN HSOL_Grade bb ON aa.GradeID = bb.GradeID
