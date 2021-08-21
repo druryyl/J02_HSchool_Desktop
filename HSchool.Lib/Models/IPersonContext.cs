@@ -1,4 +1,5 @@
 ﻿using HSchool.Lib.Models.Dto;
+using HSchool.Lib.Models.Entity;
 using Nuna.Lib.ModelingHelper;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace HSchool.Lib.Models
     public interface IPersonCommand
     {
         void Create(PersonCreateDto person);
-        void Update(PersonEntity person);
+        void Update(PersonUpdateDto person);
         void Delete(IPersonKey person);
     }
 

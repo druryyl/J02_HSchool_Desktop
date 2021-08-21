@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="DalTest\GradeDalTest.cs" />
     <Compile Include="DalTest\LevelDalTest.cs" />
+    <Compile Include="DalTest\PersonDalTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidatorTest\GradeValidatorTest.cs" />
     <Compile Include="ValidatorTest\LevelValidatorTest.cs" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HSchool.Lib.Models
+namespace HSchool.Lib.Models.Entity
 {
     public enum GenderEnum
     {

@@ -1,5 +1,6 @@
 ﻿using HSchool.Lib.BL;
 using HSchool.Lib.Models;
+using HSchool.Lib.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,20 +15,20 @@ namespace HSchool.Winform.Forms
 {
     public partial class PersonForm : Form
     {
-        private readonly IPersonBL _personBL;
+//        private readonly IPersonBL _personBL;
         private BindingSource _searchResultBinding;
 
-        public PersonForm(IPersonBL personBL)
-        {
-            InitializeComponent();
-            _personBL = personBL;
-            _searchResultBinding = new BindingSource();
-            SearchResultGrid.DataSource = _searchResultBinding;
-            SearchResultGrid.ReadOnly = true;
-            ClearScreen();
-            Search();
+        //public PersonForm(IPersonBL personBL)
+        //{
+        //    InitializeComponent();
+        //    _personBL = personBL;
+        //    _searchResultBinding = new BindingSource();
+        //    SearchResultGrid.DataSource = _searchResultBinding;
+        //    SearchResultGrid.ReadOnly = true;
+        //    ClearScreen();
+        //    Search();
 
-        }
+        //}
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -92,7 +93,7 @@ namespace HSchool.Winform.Forms
 
         private void Search()
         {
-            _personBL.Search(SearchTextBox.Text);
+            //_personBL.Search(SearchTextBox.Text);
             //_searchResultBinding.DataSource = _personBL.SearchResult;
             SearchResultGrid.Columns["LastUpdate"].Visible = false;
         }

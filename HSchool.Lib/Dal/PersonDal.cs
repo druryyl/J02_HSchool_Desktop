@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using HSchool.Lib.Helper;
 using HSchool.Lib.Models;
+using HSchool.Lib.Models.Entity;
 using Nuna.Lib.DataAccessHelper;
 using System;
 using System.Collections.Generic;
@@ -31,12 +32,12 @@ namespace HSchool.Lib.Dal
                         PersonID, PersonName, NickName,
                         BirthDate, BirthPlace, Gender,
                         FullAddr, ShortAddr, City,
-                        PhoneNo, Email, stmpcrt, stmpupd)
+                        PhoneNo, Email)
                 VALUES (
                         @PersonID, @PersonName, @NickName,
                         @BirthDate, @BirthPlace, @Gender,
                         @FullAddr, @ShortAddr, @City,
-                        @PhoneNo, @Email, @stmpcrt, @stmpupd) ";
+                        @PhoneNo, @Email) ";
 
             var dp = new DynamicParameters();
             dp.AddParam("@PersonID", person.PersonID, SqlDbType.VarChar);
@@ -54,8 +55,6 @@ namespace HSchool.Lib.Dal
             dp.AddParam("@PhoneNo", person.PhoneNo, SqlDbType.VarChar);
             dp.AddParam("@Email", person.Email, SqlDbType.VarChar);
 
-            dp.AddParam("@StmpCrt", DateTime.Now, SqlDbType.DateTime);
-            dp.AddParam("@StmpUpd", DateTime.Now, SqlDbType.DateTime);
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 conn.Execute(sql, dp);
         }
@@ -75,8 +74,7 @@ namespace HSchool.Lib.Dal
                     ShortAddr = @ShortAddr, 
                     City = @City,
                     PhoneNo = @PhoneNo, 
-                    Email = @Email,
-                    StmpUpd = @StmpUpd
+                    Email = @Email
                 WHERE
                     PersonID = @PersonID ";
 
@@ -95,8 +93,6 @@ namespace HSchool.Lib.Dal
 
             dp.AddParam("@PhoneNo", person.PhoneNo, SqlDbType.VarChar);
             dp.AddParam("@Email", person.Email, SqlDbType.VarChar);
-
-            dp.AddParam("@StmpUpd", DateTime.Now, SqlDbType.DateTime);
 
             using (var conn = new SqlConnection(ConnStringHelper.Get()))
                 conn.Execute(sql, dp);
@@ -124,8 +120,7 @@ namespace HSchool.Lib.Dal
                     PersonID, PersonName, NickName,
                     BirthDate, BirthPlace, Gender,
                     FullAddr, ShortAddr, City,
-                    PhoneNo, Email, 
-                    StmpCrt, StmpUpd
+                    PhoneNo, Email
                 FROM
                     HSOL_Person
                 WHERE
@@ -145,8 +140,7 @@ namespace HSchool.Lib.Dal
                     PersonID, PersonName, NickName,
                     BirthDate, BirthPlace, Gender,
                     FullAddr, ShortAddr, City,
-                    PhoneNo, Email,
-                    StmpCrt, StmpUpd
+                    PhoneNo, Email
                 FROM
                     HSOL_Person ";
 

@@ -1,4 +1,5 @@
 ﻿using HSchool.Lib.Models;
+using HSchool.Lib.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
