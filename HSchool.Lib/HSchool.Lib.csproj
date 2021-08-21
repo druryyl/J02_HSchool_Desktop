@@ -81,6 +81,10 @@
     <Compile Include="BL\Builder\LevelBuilder.cs" />
     <Compile Include="BL\Factory\GradeFactory.cs" />
     <Compile Include="BL\Factory\LevelFactory.cs" />
+    <Compile Include="BL\GradeCmdHandler.cs" />
+    <Compile Include="BL\GradeQueryHandler.cs" />
+    <Compile Include="BL\LevelCmdHandler.cs" />
+    <Compile Include="BL\LevelQueryHandler.cs" />
     <Compile Include="BL\Mapper\GradeMap.cs" />
     <Compile Include="BL\Mapper\LevelMap.cs" />
     <Compile Include="BL\PersonBL.cs" />
@@ -110,6 +114,8 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BL\TextFile1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

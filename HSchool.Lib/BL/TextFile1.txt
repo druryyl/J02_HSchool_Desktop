@@ -1,0 +1,29 @@
+﻿    public interface I$MainClass$QueryHandler :
+        I$MainClass$Query
+    {
+    }
+
+    public class $MainClass$QueryHandler : I$MainClass$QueryHandler
+    {
+        private readonly I$MainClass$Dal _$MainObject$Dal;
+
+        public $MainClass$QueryHandler(I$MainClass$Dal $MainObject$Dal)
+        {
+            _$MainObject$Dal = $MainObject$Dal;
+        }
+
+        public $MainClass$Entity GetData(I$MainClass$Key $MainObject$)
+        {
+            return _$MainObject$Dal.GetData($MainObject$);
+        }
+
+        public IEnumerable<$MainClass$Entity> ListData()
+        {
+            return _$MainObject$Dal.ListData();
+        }
+
+        public IEnumerable<$MainClass$Entity> ListData(I$CompositClass$Key filter)
+        {
+            return _$MainObject$Dal.ListData(filter);
+        }
+    }

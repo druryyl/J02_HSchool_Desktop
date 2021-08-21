@@ -2,7 +2,6 @@
 using HSchool.Lib.BL;
 using HSchool.Lib.Dal;
 using HSchool.Winform.Forms;
-using Intersolusi.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

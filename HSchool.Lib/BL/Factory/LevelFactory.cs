@@ -86,13 +86,6 @@ namespace HSchool.Lib.BL.Factory
             return Level;
         }
 
-        public IEnumerable<LevelEntity> ListData()
-        {
-            var result = _levelDal.ListData();
-            return result;
-        }
-
-
         public IEnumerable<LevelEntity> ListData(IGradeKey filter)
         {
             var result = _levelDal.ListData(filter);

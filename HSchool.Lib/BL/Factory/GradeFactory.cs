@@ -11,8 +11,7 @@ using System.Threading.Tasks;
 namespace HSchool.Lib.BL.Factory
 {
     public interface IGradeFactory : IGradeContext,
-        IGradeCommand,
-        IGradeQuery
+        IGradeCommand
     {
     }
 
@@ -56,20 +55,6 @@ namespace HSchool.Lib.BL.Factory
                 .FromDb(_gradeDal, key)
                 .Build();
             IsDeleted = true;
-        }
-
-
-        //  QUERY
-        public GradeEntity GetData(IGradeKey key)
-        {
-            Grade = _gradeDal.GetData(key);
-            return Grade;
-        }
-
-        public IEnumerable<GradeEntity> ListData()
-        {
-            var result = _gradeDal.ListData();
-            return result;
         }
     }
 }

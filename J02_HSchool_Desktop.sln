@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HSchool.DB", "HSchool.DB\HS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSchool.Lib", "HSchool.Lib\HSchool.Lib.csproj", "{64B3FB8C-CAFA-4305-BC42-1A4BC585D8A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HSchool.Test", "HSchool.Test\HSchool.Test.csproj", "{B56697D0-16B6-404A-B20E-0D904EF00E3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{64B3FB8C-CAFA-4305-BC42-1A4BC585D8A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64B3FB8C-CAFA-4305-BC42-1A4BC585D8A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64B3FB8C-CAFA-4305-BC42-1A4BC585D8A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B56697D0-16B6-404A-B20E-0D904EF00E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56697D0-16B6-404A-B20E-0D904EF00E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56697D0-16B6-404A-B20E-0D904EF00E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56697D0-16B6-404A-B20E-0D904EF00E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

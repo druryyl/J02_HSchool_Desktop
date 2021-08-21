@@ -57,9 +57,17 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Script" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\HSOL_Person.sql" />
     <Build Include="Tables\HSOL_ParamNo.sql" />
+    <Build Include="Tables\HSOL_Grade.sql" />
+    <Build Include="Tables\HSOL_Level.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Script\CreateDatabase.sql" />
+    <None Include="Script\CreateLogin.sql" />
+    <None Include="Script\CreateUser.sql" />
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace HSchool.Lib.Models
 {
 
-    public interface ILevelContext
+    public interface ILevelContext : IDeleteFlag
     {
         //  ROOT
         LevelEntity Level { get; }
@@ -28,29 +28,6 @@ namespace HSchool.Lib.Models
     public interface ILevelQuery
     {
         LevelEntity GetData(ILevelKey Level);
-        IEnumerable<LevelEntity> ListData();
         IEnumerable<LevelEntity> ListData(IGradeKey filter);
     }
-
-    //public interface ILevelContext
-    //{
-    //    //  ROOT
-    //    LevelEntity Level { get; }
-    //    //  VALUE OBJECT
-    //    GradeEntity Grade { get; }
-
-    //}
-    //public interface ILevelCommand
-    //{
-    //    void Create(LevelCreateDto level);
-    //    void Update(LevelUpdateDto level);
-    //    void Delete(ILevelKey level);
-    //}
-
-    //public interface ILevelQuery
-    //{
-    //    LevelEntity GetData(ILevelKey level);
-    //    IEnumerable<LevelEntity> ListData();
-    //    IEnumerable<LevelEntity> ListData(IGradeKey filter);
-    //}
 }
