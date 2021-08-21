@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HSchool.Lib.Models.Entity
+namespace HSchool.Lib.Models.Entity.Context
 {
     public interface IGradeContext : IDeleteFlag
     {

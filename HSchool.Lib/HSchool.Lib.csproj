@@ -102,7 +102,7 @@
     <Compile Include="Helpers\ConnStringHelper.cs" />
     <Compile Include="Models\Dto\PersonUpdateDto.cs" />
     <Compile Include="Models\Entity\GradeEntity.cs" />
-    <Compile Include="Models\Entity\IGradeContext.cs" />
+    <Compile Include="Models\IGradeContext.cs" />
     <Compile Include="Models\Entity\LevelEntity.cs" />
     <Compile Include="Models\Entity\PersonEntity.cs" />
     <Compile Include="Models\Entity\StudentEntity.cs" />

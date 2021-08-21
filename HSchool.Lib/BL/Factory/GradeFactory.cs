@@ -1,6 +1,7 @@
 ﻿using HSchool.Lib.Dal;
 using HSchool.Lib.Models.Dto;
 using HSchool.Lib.Models.Entity;
+using HSchool.Lib.Models.Entity.Context;
 using Nuna.Lib.PatternHelper;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,6 @@
 ﻿using HSchool.Lib.Dal;
 using HSchool.Lib.Models.Entity;
+using HSchool.Lib.Models.Entity.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
