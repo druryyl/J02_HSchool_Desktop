@@ -64,6 +64,14 @@
     <Build Include="Tables\HSOL_ParamNo.sql" />
     <Build Include="Tables\HSOL_Grade.sql" />
     <Build Include="Tables\HSOL_Level.sql" />
+    <Build Include="Tables\HSOL_Reg.sql" />
+    <Build Include="Tables\HSOL_RegFamily.sql" />
+    <Build Include="Tables\HSOL_RegFamilyParent.sql" />
+    <Build Include="Tables\HSOL_RegFamilySibling.sql" />
+    <Build Include="Tables\HSOL_RegPrevEdu.sql" />
+    <Build Include="Tables\HSOL_RegPrevEduPace.sql" />
+    <Build Include="Tables\HSOL_RegReligion.sql" />
+    <Build Include="Tables\HSOL_RegScholasticIssue.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Script\CreateDatabase.sql" />

@@ -11,10 +11,12 @@ namespace HSchool.Lib.RegDomain.Models.Entity
         string RegID { get; set; }
     }
 
-    public class RegModel : IRegKey
+    public class RegModel : IRegKey, IGradeKey
     {
         public string RegID { get; set; }
         public string RegDate { get; set; }
         public string PersonID { get; set; }
+        public string GradeID { get; set; }
+        public string AcademicYear { get; set; }
     }
 }

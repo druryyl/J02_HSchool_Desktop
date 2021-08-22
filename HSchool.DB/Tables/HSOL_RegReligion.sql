@@ -1,0 +1,13 @@
+﻿CREATE TABLE HSOL_RegReligion
+(
+	RegID VARCHAR(2) NOT NULL CONSTRAINT DF_HSOL_RegReligion_RegID DEFAULT(''),
+	ChurchName VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegReligion_ChurchName DEFAULT(''),
+	ChurchAddr VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegReligion_ChurchAddr DEFAULT(''),
+	PastorName VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegReligion_PastorName DEFAULT(''),
+	PhoneNo VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegReligion_PhoneNo DEFAULT(''),
+	FatherReligion INT NOT NULL CONSTRAINT DF_HSOL_RegReligion_FatherReligion DEFAULT(0),
+	MotherReligion INT NOT NULL CONSTRAINT DF_HSOL_RegReligion_MotherSReligion DEFAULT(0),
+	IsProfessionApplicant BIT NOT NULL CONSTRAINT DF_HSOL_RegReligion_IsProfessionApplicant DEFAULT(0),
+
+	CONSTRAINT PK_HSOL_RegReligion_RegID PRIMARY KEY CLUSTERED (RegID)
+)

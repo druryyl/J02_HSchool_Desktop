@@ -105,6 +105,7 @@
     <Compile Include="RegDomain\Models\Entity\RegMedicalModel.cs" />
     <Compile Include="RegDomain\Models\Entity\RegModel.cs" />
     <Compile Include="RegDomain\Models\Entity\RegPrevEduModel.cs" />
+    <Compile Include="RegDomain\Models\Entity\RegReligionModel.cs" />
     <Compile Include="RegDomain\Models\Entity\RegScholasticIssueModel.cs" />
     <Compile Include="RegDomain\Models\IStudentContext.cs" />
     <Compile Include="RegDomain\BL\Validator\GradeValidator.cs" />

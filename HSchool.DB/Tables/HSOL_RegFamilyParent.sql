@@ -1,0 +1,14 @@
+﻿CREATE TABLE HSOL_RegFamilyParent
+(
+	RegID VARCHAR(13) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_RegID DEFAULT(''),
+	PersonID VARCHAR(13) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_PersonID DEFAULT(''),
+	PersonName VARCHAR(50) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_PersonName DEFAULT(''),
+	IsBiological BIT NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_IsBiological DEFAULT(0),
+	BiologicalName VARCHAR(50) NOT NULL CONSTRAINT DF_HSOL_RegFamily_BiologicalName DEFAULT(''),
+	Employment VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_Employment DEFAULT(''),
+	Position VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_Position DEFAULT(''),
+	BussinesPhone VARCHAR(20) NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_BussinesPhone DEFAULT(''),
+	ParentType INT NOT NULL CONSTRAINT DF_HSOL_RegFamilyParent_ParentType DEFAULT(0),
+
+	CONSTRAINT PK_HSOL_RegFamilyParent_RegID PRIMARY KEY CLUSTERED (RegID)
+)
