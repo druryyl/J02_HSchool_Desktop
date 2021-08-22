@@ -1,4 +1,4 @@
-﻿using HSchool.Lib.BL;
+﻿using HSchool.Lib.RegDomain.BL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

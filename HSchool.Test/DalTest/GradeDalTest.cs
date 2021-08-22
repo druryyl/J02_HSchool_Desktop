@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
-using HSchool.Lib.Dal;
-using HSchool.Lib.Models.Entity;
+using HSchool.Lib.RegDomain.Models.Entity;
+using HSchool.Lib.RegDomain.Dal;
 using Nuna.Lib.TransactionHelper;
 using System;
 using System.Collections.Generic;
@@ -20,8 +20,8 @@ namespace HSchool.Test.DalTest
             _gradeDal = new GradeDal();
         }
 
-        private GradeEntity Grade() =>
-            new GradeEntity
+        private GradeModel Grade() =>
+            new GradeModel
             {
                 GradeID = "A1",
                 GradeName = "A2"
@@ -86,7 +86,7 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                var expected = new List<GradeEntity> { Grade() };
+                var expected = new List<GradeModel> { Grade() };
                 _gradeDal.Insert(Grade());
 
                 //  ACT

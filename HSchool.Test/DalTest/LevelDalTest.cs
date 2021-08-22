@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
-using HSchool.Lib.Dal;
-using HSchool.Lib.Models.Entity;
+using HSchool.Lib.RegDomain.Dal;
+using HSchool.Lib.RegDomain.Models.Entity;
 using Nuna.Lib.TransactionHelper;
 using System;
 using System.Collections.Generic;
@@ -21,8 +21,8 @@ namespace HSchool.Test.DalTest
             _levelDal = new LevelDal();
         }
 
-        private LevelEntity Level() =>
-            new LevelEntity
+        private LevelModel Level() =>
+            new LevelModel
             {
                 LevelID = "A1",
                 LevelName = "A2",
@@ -89,7 +89,7 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                var expected = new List<LevelEntity> { Level() };
+                var expected = new List<LevelModel> { Level() };
                 _levelDal.Insert(Level());
 
                 //  ACT

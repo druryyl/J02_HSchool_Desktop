@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.TestHelper;
-using HSchool.Lib.BL.Validator;
-using HSchool.Lib.Models;
-using HSchool.Lib.Models.Entity;
+using HSchool.Lib.RegDomain.BL.Validator;
+using HSchool.Lib.RegDomain.Models;
+using HSchool.Lib.RegDomain.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,18 +24,18 @@ namespace HSchool.Test.ValidatorTest
 
         private class Context : ILevelContext
         {
-            public Context(LevelEntity lavel, GradeEntity grade)
+            public Context(LevelModel lavel, GradeModel grade)
             {
                 Level = lavel;
                 Grade = grade;
             }
-            public LevelEntity Level { get; }
-            public GradeEntity Grade { get; }
+            public LevelModel Level { get; }
+            public GradeModel Grade { get; }
             public bool IsDeleted { get; }
         }
 
-        public LevelEntity Level() =>
-            new LevelEntity
+        public LevelModel Level() =>
+            new LevelModel
             {
                 LevelID = "A1",
                 LevelName = "A2",
@@ -44,8 +44,8 @@ namespace HSchool.Test.ValidatorTest
             };
 
 
-        public GradeEntity Grade() =>
-            new GradeEntity
+        public GradeModel Grade() =>
+            new GradeModel
             {
                 GradeID = "A3",
                 GradeName = "A4"

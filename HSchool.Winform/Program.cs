@@ -1,5 +1,5 @@
-﻿using HSchool.Lib.BL;
-using HSchool.Lib.Dal;
+﻿using HSchool.Lib.RegDomain.BL;
+using HSchool.Lib.RegDomain.Dal;
 using System;
 using System.Collections.Generic;
 using System.Linq;

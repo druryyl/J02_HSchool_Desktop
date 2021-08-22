@@ -1,6 +1,5 @@
-﻿using HSchool.Lib.BL;
-using HSchool.Lib.Models;
-using HSchool.Lib.Models.Entity;
+﻿using HSchool.Lib.RegDomain.BL;
+using HSchool.Lib.RegDomain.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +62,7 @@ namespace HSchool.Winform.Forms
 
         private void SetData()
         {
-            var person = new PersonEntity
+            var person = new PersonModel
             {
                 PersonID = PersonIDTextBox.Text,
                 PersonName = FullNameTextBox.Text,

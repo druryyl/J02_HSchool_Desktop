@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
-using HSchool.Lib.Dal;
-using HSchool.Lib.Models.Entity;
+using HSchool.Lib.RegDomain.Dal;
+using HSchool.Lib.RegDomain.Models.Entity;
 using Nuna.Lib.TransactionHelper;
 using System;
 using System.Collections.Generic;
@@ -21,8 +21,8 @@ namespace HSchool.Test.DalTest
             _personDal = new PersonDal();
         }
 
-        private PersonEntity Person() =>
-            new PersonEntity
+        private PersonModel Person() =>
+            new PersonModel
             {
                 PersonID = "A1",
                 PersonName = "A2",
@@ -98,7 +98,7 @@ namespace HSchool.Test.DalTest
             using (var trans = TransHelper.NewScope())
             {
                 //  ARRANGE
-                var expected = new List<PersonEntity> { Person() };
+                var expected = new List<PersonModel> { Person() };
                 _personDal.Insert(Person());
 
                 //  ACT
