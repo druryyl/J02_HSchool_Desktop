@@ -19,10 +19,10 @@ namespace HSchool.Lib.RegDomain.Models.Entity
         public string YearAttended { get; set; }
         public string HighestGrade { get; set; }
         public bool IsAce { get; set; }
-        public IEnumerable<RegRegEduPaceModel> LastPaces { get; set; }
+        public IEnumerable<RegPrevEduPaceModel> LastPaces { get; set; }
     }
 
-    public class RegRegEduPaceModel : IRegKey, IPaceTypeKey
+    public class RegPrevEduPaceModel : IRegKey, IPaceTypeKey
     {
         public string RegID { get; set; }
         public string PaceTypeID { get; set; }
