@@ -96,8 +96,10 @@
     <Compile Include="RegDomain\BL\PersonCmdHandler.cs" />
     <Compile Include="RegDomain\BL\PersonQueryHandle.cs" />
     <Compile Include="RegDomain\BL\Validator\StudentValidator.cs" />
+    <Compile Include="RegDomain\Dal\RegDal.cs" />
     <Compile Include="RegDomain\Dal\StudentDal.cs" />
     <Compile Include="RegDomain\Models\Dto\StudentDto.cs" />
+    <Compile Include="RegDomain\Models\Entity\AcademicYearModel.cs" />
     <Compile Include="RegDomain\Models\Entity\FamilyModel.cs" />
     <Compile Include="RegDomain\Models\Entity\IFamilyContext.cs" />
     <Compile Include="RegDomain\Models\Entity\PaceTypeModel.cs" />
