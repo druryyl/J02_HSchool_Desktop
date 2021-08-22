@@ -17,12 +17,12 @@ namespace HSchool.Lib.RegDomain.Models.Entity
         public string PreviousEdu { get; set; }
         public EduTypeEnum PreviousEduType { get; set; }
         public string YearAttended { get; set; }
-        public string HighestGradeCompleted { get; set; }
-        public bool IsAceCurriculum { get; set; }
-        public IEnumerable<RegPaceModel> LastPaces { get; set; }
+        public string HighestGrade { get; set; }
+        public bool IsAce { get; set; }
+        public IEnumerable<RegRegEduPaceModel> LastPaces { get; set; }
     }
 
-    public class RegPaceModel : IRegKey, IPaceTypeKey
+    public class RegRegEduPaceModel : IRegKey, IPaceTypeKey
     {
         public string RegID { get; set; }
         public string PaceTypeID { get; set; }

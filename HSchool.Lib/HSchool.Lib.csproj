@@ -96,6 +96,7 @@
     <Compile Include="RegDomain\BL\PersonCmdHandler.cs" />
     <Compile Include="RegDomain\BL\PersonQueryHandle.cs" />
     <Compile Include="RegDomain\BL\Validator\StudentValidator.cs" />
+    <Compile Include="RegDomain\Dal\HSOL_RegPrevEdu.cs" />
     <Compile Include="RegDomain\Dal\RegDal.cs" />
     <Compile Include="RegDomain\Dal\StudentDal.cs" />
     <Compile Include="RegDomain\Models\Dto\StudentDto.cs" />
