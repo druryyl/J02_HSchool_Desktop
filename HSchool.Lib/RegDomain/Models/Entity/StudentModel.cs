@@ -19,5 +19,6 @@ namespace HSchool.Lib.RegDomain.Models.Entity
         
         public string LevelID { get; set; }
         public string LevelName { get; set; }
+        public string RegID { get; set; }
     }
 }
